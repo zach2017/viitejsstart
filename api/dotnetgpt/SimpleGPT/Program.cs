@@ -14,9 +14,8 @@ class Program
 
     static void Main()
     {
-        LoadTrainingData();
-
-        TrainModel();
+        LoadTrainingData();  // Load existing data from file
+        TrainModel();  // Train the model
 
         while (true)
         {
@@ -44,8 +43,8 @@ class Program
                 {
                     // Add new training data
                     data.Add(new TrainingData { InputText = input, ResponseText = newResponse });
-                    SaveTrainingData();
-                    TrainModel();
+                    SaveTrainingData();  // Save new response
+                    TrainModel();  // Re-train model
                     Console.WriteLine("Thank you! I've learned a new response.");
                 }
             }
@@ -66,9 +65,10 @@ class Program
                 }
             }
         }
-        else
+
+        // If no training data exists, add default responses
+        if (data.Count == 0)
         {
-            // Predefined responses
             data = new List<TrainingData>
             {
                 new TrainingData { InputText = "hello", ResponseText = "Hi there! How can I help?" },
@@ -80,7 +80,7 @@ class Program
                 new TrainingData { InputText = "who are you", ResponseText = "I'm a simple AI trained to chat with you!" },
                 new TrainingData { InputText = "thanks", ResponseText = "You're welcome!" }
             };
-            SaveTrainingData();
+            SaveTrainingData(); // Save default responses to file
         }
     }
 

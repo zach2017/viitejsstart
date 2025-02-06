@@ -7,3 +7,5 @@ help|Sure, what do you need help with?
 who are you|I'm a simple AI trained to chat with you!
 thanks|You're welcome!
 what is this|something new
+food|what do you want to eat ?
+apple|apple is good for you go to store or check your pantry
