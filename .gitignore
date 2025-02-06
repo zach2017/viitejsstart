@@ -130,3 +130,6 @@ dist
 .pnp.*
 api/FoodPricePredictor/bin
 api/FoodPricePredictor/obj
+api/dotnetgpt/SimpleGPT/bin
+api/dotnetgpt/SimpleGPT/obj
+
